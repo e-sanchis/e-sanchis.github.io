@@ -1,10 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Portfolio de Enrique</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrique Sanchis | Cybersecurity Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #238636; /* Verde GitHub / Éxito */
+            --terminal-green: #3fb950;
+            --border-color: #30363d;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Fira Code', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .terminal-prompt {
+            color: var(--terminal-green);
+        }
+
+        h1 { font-size: 1.8rem; color: #fff; }
+        h2 { font-size: 1.4rem; color: var(--terminal-green); border-bottom: 1px solid var(--border-color); padding-bottom: 5px; }
+
+        .section { margin-bottom: 40px; }
+
+        .badge {
+            background: #21262d;
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        .project-card {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateX(10px);
+            border-color: var(--terminal-green);
+        }
+
+        a { color: var(--terminal-green); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        footer { text-align: center; font-size: 0.8rem; opacity: 0.6; margin-top: 50px; }
+    </style>
 </head>
 <body>
-    <h1>¡Hola! Soy Enrique Sanchis</h1>
-    <p>Bienvenido a mi portfolio en construcción.</p>
+
+<div class="container">
+    <header>
+        <p class="terminal-prompt">enrique@portfolio:~$ whoami</p>
+        <h1>Enrique Sanchis</h1>
+        <p>Cybersecurity Enthusiast | Pentesting & Blue Teaming</p>
+        <div class="contact">
+            <a href="https://github.com/tu-usuario">GitHub</a> • 
+            <a href="https://linkedin.com/in/tu-perfil">LinkedIn</a> • 
+            <a href="mailto:tu-email@ejemplo.com">Email</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>_about_me</h2>
+        <p>Apasionado por descubrir vulnerabilidades y fortalecer sistemas. Actualmente enfocado en el aprendizaje de auditorías web y seguridad en redes.</p>
+    </section>
+
+    <section class="section">
+        <h2>_skills</h2>
+        <div>
+            <span class="badge">Nmap</span>
+            <span class="badge">Wireshark</span>
+            <span class="badge">Burp Suite</span>
+            <span class="badge">Linux Administration</span>
+            <span class="badge">Python (Scripting)</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>_writeups_&_projects</h2>
+        <div class="project-card">
+            <h3>HackTheBox - Machine Name</h3>
+            <p>Explotación de una vulnerabilidad de Inyección SQL y escalada de privilegios mediante un script de cron mal configurado.</p>
+            <a href="#">Leer Writeup -></a>
+        </div>
+        <div class="project-card">
+            <h3>Script de Automatización Nmap</h3>
+            <p>Herramienta en Python para escanear puertos y detectar servicios vulnerables de forma automática.</p>
+            <a href="#">Ver Repositorio -></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>2026 © Enrique Sanchis - Built with passion and 0 templates.</p>
+    </footer>
+</div>
+
 </body>
 </html>
